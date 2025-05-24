@@ -1,0 +1,55 @@
+{
+    "terms": [
+      {
+        "token": "antissemitismo",
+        "descricao": "Ideologia que promove hostilidade contra os judeus, frequentemente associada a grupos extremistas de supremacia branca.",
+        "subcultura": ["NSBM", "supremacia_racial", "alt-right"],
+        "aliases": ["anti-semitismo", "antisemitic"],
+        "alvo": ["judeus"],
+        "tipo": "text",
+        "regex": "anti[-]?semitismo",
+        "exemplo": "Usado por grupos supremacistas, como NSBM, para incitar ódio contra judeus."
+      },
+      {
+        "token": "jihad",
+        "descricao": "Termo frequentemente utilizado por grupos extremistas islâmicos para justificar a violência em nome de uma causa religiosa.",
+        "subcultura": ["extremismo_islamico"],
+        "aliases": [],
+        "alvo": ["ocidentais", "não-muçulmanos"],
+        "tipo": "termo_textual",
+        "regex": "jihad",
+        "exemplo": "Usado por grupos como ISIS para justificar ataques violentos contra não-muçulmanos."
+      },
+      {
+        "token": "redpill",
+        "descricao": "Ideologia associada a movimentos extremistas de direita que buscam a radicalização de suas crenças através de um despertar ideológico, frequentemente usado para incitar ódio e violência contra minorias.",
+        "subcultura": ["alt-right", "incels"],
+        "aliases": ["pill", "redpill community"],
+        "alvo": ["mulheres", "comunidades_lgbt", "minorias_raciais"],
+        "tipo": "termo_textual",
+        "regex": "redpill",
+        "exemplo": "Movimentos de extrema-direita, como o alt-right, usam 'redpill' para justificar atitudes misóginas e violentas."
+      },
+      {
+        "token": "blackpill",
+        "descricao": "Visão fatalista que reforça a crença de que a sociedade está irreparavelmente corrompida, levando à desesperança e, em alguns casos, à adoção de comportamentos violentos.",
+        "subcultura": ["incels", "extremismo_digital"],
+        "aliases": ["blackpill community"],
+        "alvo": ["mulheres", "sociedade"],
+        "tipo": "termo_textual",
+        "regex": "blackpill",
+        "exemplo": "Movimentos de incels frequentemente usam a 'blackpill' para justificar violência contra mulheres e a sociedade em geral."
+      },
+      {
+        "token": "lone_wolf",
+        "descricao": "Atos de extremismo realizados por indivíduos que não pertencem a grupos organizados, mas agem de forma independente, frequentemente associados a ataques violentos.",
+        "subcultura": ["extremismo_solista"],
+        "aliases": [],
+        "alvo": ["sociedade", "alvos_inocentes"],
+        "tipo": "termo_textual",
+        "regex": "lone\\s?wolf",
+        "exemplo": "O termo 'lone wolf' é frequentemente associado a ataques terroristas realizados por indivíduos isolados, como o atentado em Christchurch."
+      }
+    ]
+  }
+  

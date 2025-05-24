@@ -1,0 +1,33 @@
+# docker-compose.yml
+
+version: '3.9'
+
+services:
+  app:
+    container_name: br-echo-app
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8501:8501"  # Streamlit
+      - "8000:8000"  # FastAPI
+    volumes:
+      - .:/app
+    depends_on:
+      - mongo
+    environment:
+      - MONGO_URI=mongodb://mongo:27017/
+      - TESSDATA_PREFIX=/usr/share/tesseract-ocr/5/tessdata/
+    command: bash -c "uvicorn api.main:app --host 0.0.0.0 --port 8000 --reload & streamlit run web/streamlit_app.py --server.port=8501 --server.address=0.0.0.0"
+
+  mongo:
+    container_name: br-echo-mongo
+    image: mongo:6
+    restart: always
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo-data:/data/db
+
+volumes:
+  mongo-data:
