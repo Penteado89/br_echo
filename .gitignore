@@ -42,7 +42,9 @@ modelos/*/training_args.bin
 modelos/*/tokenizer_config.json
 modelos/*/special_tokens_map.json
 modelos/*/vocab.txt
-!modelos/.gitkeep
+modelos/**/*.*           # <- esta linha cobre qualquer outro arquivo que escape dos padrões acima
+!modelos/.gitkeep        # mantém a pasta no repositório, mesmo vazia
+
 
 # === DADOS E SAÍDAS ===
 dados/
