@@ -4,7 +4,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 from api.explain_risk import explicar_risco_com_ollama
-from processing.classificador_regras import classificar_por_regras
+from scripts.classificador_regras import classificar_por_regras
 from processing.predict_bert import carregar_modelo_bert, prever_com_bert
 from utils.pdf_export import gerar_pdf
 from utils.db import inicializar_db, salvar_triagem, listar_triagens

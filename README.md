@@ -1,95 +1,91 @@
-# BR-ECHO
-**Brazilian Extremism Content Hashing Observatory**
 
-Este projeto visa construir um observatório linguístico-comportamental e um banco de hashes para rastrear, classificar e analisar conteúdo extremista em português brasileiro.
+# 🔍 BR-ECHO: Brazilian Extremist Content Hashing Observatory
 
----
+O **BR-ECHO** é uma aplicação de monitoramento e classificação de conteúdo extremista em língua portuguesa. Através de uma interface interativa em [Streamlit](https://streamlit.io/), integra múltiplos componentes de NLP, classificação de risco, geração de hashes e justificativas semânticas com RAG (Retrieval-Augmented Generation).
 
-## 🧠 Funcionalidades principais
-
-- 🌐 Painel interativo com Streamlit
-- 🔎 Classificação de risco linguístico por:
-  - Regras linguísticas
-  - Modelo supervisionado (BERT fine-tuned com discurso de ódio)
-- 🧠 Explicações automáticas via RAG + LLM (Ollama)
-- 📄 Geração de relatórios em PDF
-- 🗃️ Histórico completo salvo via SQLite
-- 📂 Triagem em lote de textos via CSV
-- 🔍 Filtros por data, score e palavra-chave
-- 🔁 Reprocessamento de explicações com LLM
+> Última atualização: 2025-07-11
 
 ---
 
-## ⚙️ Tecnologias utilizadas
+## 🚀 Funcionalidades Principais
 
-- Python
-- Streamlit + FastAPI
-- SQLite + MongoDB
-- Whisper + Tesseract OCR
-- OpenAI Whisper
-- ImageHash (pHash)
-- SimHash
-- TLSH (opcional)
-- Transformers (BERTimbau, Mistral, etc.)
-- Ollama (LLM local)
+### 📂 1. Classificação em Lote via CSV
+- Upload de arquivos `.csv` contendo uma coluna `texto`
+- Classificação automática usando API local (`/classificar_lote`)
+- Geração de labels binários, multilabels e tokens ativados
+- Download dos resultados em CSV
+
+### 🔍 2. Revisão Manual + Justificativa RAG
+- Permite gerar justificativas semânticas automáticas via RAG
+- Interface interativa para aprovar/reprovar justificativas
+- Exportação das justificativas para CSV
+
+### 🔐 3. Geração de Hashes e Armazenamento
+- Geração de múltiplos tipos de hash (SHA256, BLAKE3, SimHash, MD5, SSDEEP)
+- Armazenamento dos resultados em banco MongoDB
+- Controle de envio manual com checkboxes
+
+### 📚 4. Glossário BR-ECHO
+- Glossário anotado de termos extremistas com filtros por ideologia, tipo e regex
+- Visualização expandida e download do glossário filtrado
+
+### 📦 5. Banco de Dados de Hashes
+- Consulta interativa ao MongoDB com filtros por tipo e busca textual
+- Exibição dos textos associados e hashes gerados
+- Download da tabela filtrada
 
 ---
 
-## 🚀 Como executar localmente
-
-1. Clone o repositório:
+## 📦 Instalação
 
 ```bash
-git clone https://github.com/seuusuario/br-echo.git
-cd br-echo
-```
+# Clonar o repositório
+git clone https://github.com/Penteado89/br_echo.git
+cd br_echo
 
-2. (Opcional) Crie e ative um ambiente virtual:
+# Criar e ativar ambiente virtual
+python3 -m venv .venv
+source .venv/bin/activate  # ou .venv\Scripts\activate no Windows
 
-```bash
-python -m venv venv
-source venv/bin/activate
-```
-
-3. Instale as dependências:
-
-```bash
+# Instalar dependências
 pip install -r requirements.txt
 ```
 
-4. Inicie o painel BR-ECHO:
+---
+
+## ▶️ Executar a Aplicação
 
 ```bash
-chmod +x deploy_br_echo.sh
-./deploy_br_echo.sh
+# Inicializar a aplicação Streamlit
+streamlit run web/streamlit_app.py
 ```
 
 ---
 
-## 📁 Estrutura do projeto
+## 🌐 Dependências
 
-```
-br-echo/
-├── api/                      # FastAPI endpoints (em desenvolvimento)
-├── processing/               # Classificadores, embeddings, pré-processamento
-├── utils/                    # Geração de PDF e banco SQLite
-├── web/                      # Painel Streamlit principal
-├── modelos/                  # Modelos fine-tuned salvos
-├── glossario/                # Dados linguísticos e anotações
-├── relatorios/               # Relatórios PDF gerados
-├── deploy_br_echo.sh         # Script de inicialização
-├── requirements.txt
-└── README.md
-```
+- `streamlit`
+- `requests`
+- `pandas`
+- `pymongo`
+- `Pillow`
+- `json`
+- API backend rodando localmente em `http://127.0.0.1:8000`
 
 ---
 
-## ✨ Contribuição
+## 🧠 Sobre o Projeto
 
-Pull requests são bem-vindos! Este projeto é parte de uma pesquisa acadêmica em linguística computacional, radicalização online e inteligência artificial.
+Este projeto faz parte de uma pesquisa de doutorado em Linguística Linguística (Processamento Computacional de Linguagem Natural) aplicada à detecção de conteúdo extremista em língua portuguesa. O sistema visa oferecer uma plataforma de triagem, anotação e armazenamento de risco linguístico, com foco em transparência e reprodutibilidade.
+
+---
+## ✍️ Autor
+
+Projeto desenvolvido por [**Ricardo Cabral Penteado**](https://www.linkedin.com/in/ricardo-cabral-penteado-45144b19/)  
+Doutorando em Linguística (Processamento Computacional de Linguagem Natural) — Universidade de São Paulo (USP)
 
 ---
 
-## 📚 Licença
+## 📄 Licença
 
-Este projeto está licenciado sob os termos da Licença MIT.
+MIT License

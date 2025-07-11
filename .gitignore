@@ -1,10 +1,79 @@
+# === SISTEMAS OPERACIONAIS ===
+.DS_Store
+Thumbs.db
+
+# === PYTHON ===
 __pycache__/
-*.pyc
-*.pyo
-*.pyd
-*.db
-.env
+*.py[cod]
+*.so
+*.egg
+*.egg-info/
+*.log
+
+# === VENV E DEPENDÊNCIAS ===
 .venv/
+venv/
+ENV/
+env/
+pyvenv.cfg
+
+# === CACHES E TESTES ===
+.cache/
+.pytest_cache/
+*.coverage
+.coverage.*
+htmlcov/
+.tox/
+nosetests.xml
+test-output/
+junit-*.xml
+
+# === JUPYTER ===
+.ipynb_checkpoints/
+
+# === VS CODE E EDITORES ===
+.vscode/
+*.code-workspace
+
+# === MODELOS TREINADOS ===
+modelos/*/config.json
+modelos/*/model.safetensors
+modelos/*/training_args.bin
+modelos/*/tokenizer_config.json
+modelos/*/special_tokens_map.json
+modelos/*/vocab.txt
+!modelos/.gitkeep
+
+# === DADOS E SAÍDAS ===
+dados/
+resultados/
 temp/
-node_modules/
-.git/
+*.csv
+*.tsv
+*.jsonl
+*.pdf
+
+# === INDEX FAISS E ARQUIVOS BINÁRIOS ===
+*.pkl
+*.index
+*.bin
+
+# === DOCKER ===
+*.pid
+*.sock
+
+# === LOGS E ANOTAÇÕES ===
+*.log
+*.out
+*.err
+
+# === IMPEDIR SUBIDA DE CHAVES OU TOKENS (PRECAUÇÃO) ===
+*.env
+.env.*
+secrets.*
+
+# === OUTROS ===
+*.bak
+*.tmp
+*.old
+*.swp

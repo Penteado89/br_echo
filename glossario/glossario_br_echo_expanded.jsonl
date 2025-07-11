@@ -1,9 +1,0 @@
-{"token": "14 palavras", "categoria": "neonazismo", "descricao": "Slogan supremacista: 'Devemos garantir a existência do nosso povo e um futuro para as crianças brancas.'", "risk_score": 5, "aliases": ["14 words", "14w", "quatorze palavras"]}
-{"token": "heil", "categoria": "neonazismo", "descricao": "Saudação nazista 'Heil Hitler', comum em fóruns extremistas.", "risk_score": 5, "aliases": ["heil hitler", "hh", "h!"]}
-{"token": "chad", "categoria": "incel", "descricao": "Homem alfa idealizado pelos incels; frequentemente em oposição a 'beta' ou 'virgem'.", "risk_score": 3, "aliases": ["chad brasileiro", "giga chad"]}
-{"token": "foid", "categoria": "incel", "descricao": "Forma pejorativa de se referir a mulheres ('female humanoid').", "risk_score": 4, "aliases": ["foids", "foidzinhas", "3dpd"]}
-{"token": "saudação TCC", "categoria": "ataques escolares", "descricao": "Expressão usada em tom reverente para glorificar ataques em escolas.", "risk_score": 5, "aliases": ["vida longa ao tcc", "viva o tcc", "tcc vive"]}
-{"token": "checklist", "categoria": "ataques escolares", "descricao": "Lista de preparação para atentados, comum em grupos de planejamento de ataques.", "risk_score": 5, "aliases": ["checklist tcc", "lista tcc", "check tcc"]}
-{"token": "globalistas", "categoria": "alt-right", "descricao": "Usado em contexto conspiratório para se referir a elites econômicas ou judeus.", "risk_score": 4, "aliases": ["elite global", "agenda globalista", "globalismo"]}
-{"token": "marxismo cultural", "categoria": "alt-right", "descricao": "Teoria conspiratória sobre suposta dominação da cultura por marxistas.", "risk_score": 3, "aliases": ["gramscismo", "esquerdismo cultural", "ideologia marxista"]}
-{"token": "feminazi", "categoria": "misoginia", "descricao": "Forma pejorativa de se referir a feministas; sugere fanatismo.", "risk_score": 3, "aliases": ["militante feminista", "femilixo"]}
