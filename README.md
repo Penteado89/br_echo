@@ -56,6 +56,11 @@ pip install -r requirements.txt
 ## ▶️ Executar a Aplicação
 
 ```bash
+# Rodar a API:
+uvicorn main:app --reload
+```
+
+```bash
 # Inicializar a aplicação Streamlit
 streamlit run web/streamlit_app.py
 ```
