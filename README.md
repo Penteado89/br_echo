@@ -62,18 +62,6 @@ streamlit run web/streamlit_app.py
 
 ---
 
-## 🌐 Dependências
-
-- `streamlit`
-- `requests`
-- `pandas`
-- `pymongo`
-- `Pillow`
-- `json`
-- API backend rodando localmente em `http://127.0.0.1:8000`
-
----
-
 ## 🧠 Sobre o Projeto
 
 Este projeto faz parte de uma pesquisa de doutorado em Linguística Linguística (Processamento Computacional de Linguagem Natural) aplicada à detecção de conteúdo extremista em língua portuguesa. O sistema visa oferecer uma plataforma de triagem, anotação e armazenamento de risco linguístico, com foco em transparência e reprodutibilidade.
